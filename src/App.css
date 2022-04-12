@@ -25,16 +25,16 @@ label {
   overflow: hidden;
 }
 
-.sunrise{
-  background:url('https://images.pexels.com/photos/965968/pexels-photo-965968.jpeg');
+.sunrise {
+  background: url("https://images.pexels.com/photos/965968/pexels-photo-965968.jpeg");
   background-size: cover;
   background-position: center;
   overflow: hidden;
 }
 
-.sunset{
-    background:url('https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg');
-    background-size: cover;
+.sunset {
+  background: url("https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg");
+  background-size: cover;
   background-position: center;
   overflow: hidden;
 }

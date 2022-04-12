@@ -1,5 +1,4 @@
 import Axios from "axios";
-// import Weather_Key from "../config";
 
 const FetchForecast = async (query) => {
     const OpenWeatherKey = process.env.REACT_APP_Key;
@@ -12,9 +11,11 @@ const FetchForecast = async (query) => {
             APPID: OpenWeatherKey,
         },
     }).catch((err) => {
-        if (err.response) {
+        if(err.response){
+            console.log('Enter valid city name')
             alert("Enter valid city name");
-        }
+            return null
+          }
     });
     return data;
 };
