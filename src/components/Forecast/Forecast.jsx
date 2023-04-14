@@ -2,18 +2,16 @@ import React, { useContext } from "react";
 import { ForecastContext } from "../../context/ForecastContext";
 import Detail from "./Details";
 
-const Forecast = () => {
-  const { data } = useContext(ForecastContext);
-  const forecastData = data.list || 0;
+function Forecast() {
+  const { fetchdata } = useContext(ForecastContext);
+  const forecastData = fetchdata?.list || 0;
 
-  return (
-    <div>
-      {data.cnt > 0 ? (
-        <div className="container">
-          <Detail props={forecastData} />
-        </div>
-      ) : null}
+  return fetchdata?.cnt > 0 ? (
+    <div className="container">
+      <Detail props={forecastData} />
     </div>
+  ) : (
+    <div>No data to display</div>
   );
-};
+}
 export default Forecast;
