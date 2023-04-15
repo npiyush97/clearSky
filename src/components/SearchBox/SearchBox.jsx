@@ -29,7 +29,7 @@ export default function SearchBox() {
 
   function handleChange(e) {
     setQuery(e.target.value);
-    if (e.code === "Enter" || e.key === "Enter") {
+    if (e.code === "Enter" || e.keyCode === 13) {
       handleToday(query);
       handleForecast(query);
       setQuery("");
