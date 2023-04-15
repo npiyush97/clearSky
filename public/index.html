@@ -23,7 +23,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-
+    <link rel="manifest" href="./manifest.json">
     <title>Weather App</title>
   </head>
   <body>
@@ -39,5 +39,19 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./serviceworker.js")
+            .then((reg) => {
+              console.log("service worker register");
+            })
+            .catch((error) => {
+              console.log("Error in service worker", error);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
